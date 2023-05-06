@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/swaminav/Documents/appiumCode/AppiumFramework">
+        <parameter name = "PlatformName" value="Android"/>
+        <parameter name = "UrlAppiumLink" value="http://0.0.0.0:4723"/>
+        <classes>
+            <class name="TestCase001"/>
+            <class name="TestCase002"/>
+        </classes>
+    </test>
+</suite>
