@@ -1,3 +1,5 @@
+package BaseClass;
+
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -16,13 +18,14 @@ public class BaseTest {
 
 
     @BeforeClass
-    @Parameters({"PlatformName","UrlAppiumLink"})
-    public void launchApp(String PlatformName,String UrlAppiumLink) throws IOException {
+    @Parameters({"PlatformName","UrlAppiumLink","udid"})
+    public void launchApp(String PlatformName,String UrlAppiumLink,String udid) throws IOException {
         fis=new FileInputStream(System.getProperty("user.dir")+"//src//main//java//config//config.properties");
         prop=new Properties();
         prop.load(fis);
         UiAutomator2Options options=new UiAutomator2Options();
         options.setPlatformName(PlatformName);
+        options.setUdid(udid);
         driver=new AndroidDriver(new URL(UrlAppiumLink),options);
         activity=new Activity(prop.getProperty("appPackage"),prop.getProperty("appActivity"));
         driver.startActivity(activity);

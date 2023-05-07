@@ -10,15 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 import utils.AndroidActions;
 
 public class Page1 extends AndroidActions {
-    AndroidDriver driver;
-    public Page1(AndroidDriver driver){
+    //AndroidDriver driver;
+    public Page1(AppiumDriver driver){
         super(driver);
         this.driver=driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-    @FindBy(xpath = "//android.widget.TextView[@content-desc=\"Views\"]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc=\"Views\"]")
     private WebElement views;
-
 
     public Page2 clickViewsButton(){
         clickElement(views);

@@ -1,5 +1,4 @@
-import io.qameta.allure.*;
-import jdk.jfr.Description;
+import BaseClass.BaseTest;
 import org.testng.annotations.Test;
 import pageObjectsDesign.Page1;
 

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/Users/swaminav/Documents/appiumCode/AppiumFramework">
+<suite name="All Test Suite" verbose="2" parallel="tests">
+    <test name="vivo v75" >
         <parameter name = "PlatformName" value="Android"/>
         <parameter name = "UrlAppiumLink" value="http://0.0.0.0:4723"/>
+        <parameter name="udid" value="1393984216000IH"/>
         <classes>
             <class name="TestCase001"/>
             <class name="TestCase002"/>
+            <class name="TestCase003"/>
+        </classes>
+    </test>
+    <test name="poco m2 pro" >
+        <parameter name = "PlatformName" value="Android"/>
+        <parameter name = "UrlAppiumLink" value="http://0.0.0.0:4723"/>
+        <parameter name="udid" value="e7e46350"/>
+        <classes>
+            <class name="TestCase001"/>
+            <class name="TestCase002"/>
+            <class name="TestCase003"/>
         </classes>
     </test>
 </suite>
