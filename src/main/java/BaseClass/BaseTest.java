@@ -1,5 +1,7 @@
 package BaseClass;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -10,12 +12,16 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 
+
+
 public class BaseTest {
     public AndroidDriver driver;
     public Activity activity;
-    FileInputStream fis;
-    Properties prop;
-
+    public FileInputStream fis;
+    public Properties prop;
+    public String path;
+    public ExtentSparkReporter reporter;
+    public ExtentReports reports;
 
     @BeforeClass
     @Parameters({"PlatformName","UrlAppiumLink","udid"})

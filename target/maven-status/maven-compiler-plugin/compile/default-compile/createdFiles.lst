@@ -1,5 +1,7 @@
 BaseClass\BaseTest.class
-pageObjectsDesign\Page3.class
 pageObjectsDesign\Page1.class
 pageObjectsDesign\Page2.class
 utils\AndroidActions.class
+utils\Listeners.class
+utils\ExtentReporterNG.class
+pageObjectsDesign\Page3.class

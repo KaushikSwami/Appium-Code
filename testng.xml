@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="2" parallel="tests">
+    <listeners>
+        <listener class-name="utils.Listeners"/>
+    </listeners>
     <test name="vivo v75" >
         <parameter name = "PlatformName" value="Android"/>
         <parameter name = "UrlAppiumLink" value="http://0.0.0.0:4723"/>
